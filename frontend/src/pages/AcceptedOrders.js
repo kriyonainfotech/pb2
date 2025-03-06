@@ -28,7 +28,9 @@ const AcceptedOrders = () => {
 const fetchAcceptedOrders = async () => {
   setLoading(true);
   try {
-    const response = await axios.get(`${API_URL}/admin/accepted-orders`);
+    const response = await axios.get(`${API_URL}/admin/accepted-orders`, {
+      withCredentials: true, // Include credentials if needed
+    });
     console.log("Accepted Orders Response:", response.data);
 
     // Check if response contains the expected array

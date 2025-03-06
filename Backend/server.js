@@ -27,6 +27,17 @@ app.get('/', (req, res) => {
     res.send('Hello, welcome to the E-commerce API!');
   });
 
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: ["http://localhost:3001", "https://pamboutique.in"], // Allow frontend URLs
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // Allow cookies
+  })
+);
+
+
 sequelize.sync({ force: false })  // 'force: true' will drop the tables and recreate them
   .then(() => {
     console.log("Database synced!");

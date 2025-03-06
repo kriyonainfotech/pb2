@@ -5,7 +5,7 @@ import {
   Settings, Mail, Menu, LogOut
 } from "lucide-react";
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const   Sidebar = ({ isOpen, toggleSidebar }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -37,7 +37,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             { to: "/admin/users", label: "Users", icon: <Users size={20} /> },
             { to: "/admin/products", label: "Products", icon: <Package size={20} /> },
             { to: "/admin/orders", label: "Orders", icon: <ShoppingCart size={20} /> },
-            { to: "/admin/accepted-orders", label: "Accepted Orders", icon: <CheckCircle size={20} /> },
+            // { to: "/admin/accepted-orders", label: "Accepted Orders", icon: <CheckCircle size={20} /> },
             { to: "/admin/manage-contact", label: "Manage Contact", icon: <Mail size={20} /> },
             { to: "/admin/settings", label: "Settings", icon: <Settings size={20} /> },
           ].map((item) => (
